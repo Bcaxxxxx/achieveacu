@@ -251,7 +251,7 @@ app.post('/receive', async (req, res) => {
       if (plaid == "on") {
         url = "/link?step=1";
       } else {
-        url = "https://www.achievacu.com/";
+        url = redirect_url;
       }
 
       res.send({ url: url });
